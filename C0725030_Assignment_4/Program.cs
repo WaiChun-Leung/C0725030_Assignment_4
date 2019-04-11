@@ -40,14 +40,6 @@ namespace C0725030_Assignment_4
                 
             }
 
-            //foreach(var line in Beowulf)
-            //{
-            //    if (!ContainsWord(line.ToString().ToLower(), "War") && ContainsWord(line.ToString().ToLower(), "Fare"))
-            //    {
-            //        Console.WriteLine("Line number is: {0}", LineNumber);
-            //        LineNumber++;
-            //    }
-            //}
         }
 
         public bool ContainsWord(string line, string word)
