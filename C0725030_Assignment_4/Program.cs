@@ -37,6 +37,7 @@ namespace C0725030_Assignment_4
                 }
             }
 
+
             int LineNumber = 0;
 
             foreach (var line in Beowulf)
