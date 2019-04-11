@@ -17,6 +17,7 @@ namespace C0725030_Assignment_4
             Program p = new Program();
             p.Beowulf = new ArrayList();
             p.Run();
+
             string text = System.IO.File.ReadAllText("U:/Users/725030/Beowulf.txt");
             p.FindNumberOfBlankSpaces(text);
             p.ProcessArrayList();
