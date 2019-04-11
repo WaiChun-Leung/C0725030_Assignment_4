@@ -31,7 +31,7 @@ namespace C0725030_Assignment_4
 
             foreach (var line in Beowulf)
             {
-                if (ContainsWord(line.ToString().ToLower(), "sea") && !ContainsWord(line.ToString().ToLower(), "fare"))
+                if (ContainsWord(line.ToString().ToLower(), "sea") && ContainsWord(line.ToString().ToLower(), "fare"))
                 {
                     Console.WriteLine("Line number is: {0}", LineNumber);
                     LineNumber++;
