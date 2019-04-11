@@ -1,6 +1,6 @@
 # C0725030_Assignment_4
 
-How many lines in total are there in the file:
+How many lines in total are there in the file: 4016 lines
 
 How many WORDS are there in the file:
 
