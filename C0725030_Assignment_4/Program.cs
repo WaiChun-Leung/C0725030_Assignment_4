@@ -17,7 +17,7 @@ namespace C0725030_Assignment_4
             Program p = new Program();
             p.Beowulf = new ArrayList();
             p.Run();
-
+            p.ProcessArrayList();
         }
 
         public void Run()
@@ -32,21 +32,30 @@ namespace C0725030_Assignment_4
 
             foreach (var line in Beowulf)
             {
-                LineNumber++;
-                Console.WriteLine(line);
-                if (ContainsWord(line.ToString(), "sea")&& ContainsWord(line.ToString(), "Fare"))
+                if (ContainsWord(line.ToString().ToLower(), "sea")&& ContainsWord(line.ToString().ToLower(), "Fare"))
                 {
                     Console.WriteLine("Line number is: {0}", LineNumber);
+                    LineNumber++;
                 }
+                
             }
+
+            //foreach(var line in Beowulf)
+            //{
+            //    if (!ContainsWord(line.ToString().ToLower(), "War") && ContainsWord(line.ToString().ToLower(), "Fare"))
+            //    {
+            //        Console.WriteLine("Line number is: {0}", LineNumber);
+            //        LineNumber++;
+            //    }
+            //}
         }
 
         public bool ContainsWord(string line, string word)
         {
             //TODO: write are algorithm to detect if a line contains a word
-            if(line.Contains("sea") == true)
+            if(line.Contains(word) == true)
             {
-
+                return true;
             }
             return false;
         }
@@ -56,7 +65,6 @@ namespace C0725030_Assignment_4
             //Read file using StreamReader. Reads file line by line
             using (StreamReader file = new StreamReader("U:/Users/725030/Beowulf.txt"))
             {
-                //int words = 1;
                 int counter = 0;
                 string ln;
 
@@ -67,23 +75,11 @@ namespace C0725030_Assignment_4
                     counter++;
                 }
 
-                //while (counter <= ln.Length - 1)
-                //{
-                //    if (ln[counter] == ' ' || ln[counter] == '\n' || ln[counter] == '\t')
-                //    {
-                //        words++;
-                //    }
-                //    counter++;
-                //}
                 file.Close();
                 Console.WriteLine($"File has {counter} lines.");
-                //Console.WriteLine("Number of words in the string: {0}", words);  
-                Console.WriteLine();
             }
 
         }
-
-
 
         public int FindNumberOfBlankSpaces(string line)
         {
