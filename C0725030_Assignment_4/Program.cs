@@ -27,6 +27,16 @@ namespace C0725030_Assignment_4
 
         public void ProcessArrayList()
         {
+            int LineNum = 0;
+            foreach (var line in Beowulf)
+            {
+                if (ContainsWord(line.ToString().ToLower(), "fare") && (ContainsWord(line.ToString().ToLower(), "sea")))
+                {
+                    Console.WriteLine("Line is: {0}", LineNum);
+                    LineNum++;
+                }
+            }
+
             int LineNumber = 0;
 
             foreach (var line in Beowulf)
@@ -37,6 +47,8 @@ namespace C0725030_Assignment_4
                     LineNumber++;
                 }
             }
+
+            
         }
 
         public bool ContainsWord(string line, string word)
