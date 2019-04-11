@@ -23,6 +23,32 @@ namespace C0725030_Assignment_4
         public void Run()
         {
             this.ReadTextFiles();
+            this.ProcessArrayList();
+        }
+
+        public void ProcessArrayList()
+        {
+            int LineNumber = 0;
+
+            foreach (var line in Beowulf)
+            {
+                LineNumber++;
+                Console.WriteLine(line);
+                if (ContainsWord(line.ToString(), "sea")&& ContainsWord(line.ToString(), "Fare"))
+                {
+                    Console.WriteLine("Line number is: {0}", LineNumber);
+                }
+            }
+        }
+
+        public bool ContainsWord(string line, string word)
+        {
+            //TODO: write are algorithm to detect if a line contains a word
+            if(line.Contains("sea") == true)
+            {
+
+            }
+            return false;
         }
 
         public void ReadTextFiles()
@@ -30,7 +56,7 @@ namespace C0725030_Assignment_4
             //Read file using StreamReader. Reads file line by line
             using (StreamReader file = new StreamReader("U:/Users/725030/Beowulf.txt"))
             {
-                int words = 1;
+                //int words = 1;
                 int counter = 0;
                 string ln;
 
@@ -51,10 +77,12 @@ namespace C0725030_Assignment_4
                 //}
                 file.Close();
                 Console.WriteLine($"File has {counter} lines.");
-                Console.WriteLine("Number of words in the string: {0}", words);                
+                //Console.WriteLine("Number of words in the string: {0}", words);  
+                Console.WriteLine();
             }
 
         }
+
 
 
         public int FindNumberOfBlankSpaces(string line)
