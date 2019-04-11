@@ -23,7 +23,6 @@ namespace C0725030_Assignment_4
         public void Run()
         {
             this.ReadTextFiles();
-            this.ProcessArrayList();
         }
 
         public void ProcessArrayList()
@@ -32,14 +31,12 @@ namespace C0725030_Assignment_4
 
             foreach (var line in Beowulf)
             {
-                if (ContainsWord(line.ToString().ToLower(), "sea")&& ContainsWord(line.ToString().ToLower(), "Fare"))
+                if (ContainsWord(line.ToString().ToLower(), "sea") && !ContainsWord(line.ToString().ToLower(), "fare"))
                 {
                     Console.WriteLine("Line number is: {0}", LineNumber);
                     LineNumber++;
                 }
-                
             }
-
         }
 
         public bool ContainsWord(string line, string word)
